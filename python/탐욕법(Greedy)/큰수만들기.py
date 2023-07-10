@@ -3,26 +3,22 @@
 
 def solution(number, k):
     answer = []
-
-    count_remove = 0
-    Length = len(number) - k
     
     for num in range(0, len(number)):
 
         temp = number[num]
 
-        if not answer or count_remove >= k:
+        if not answer:
             answer.append(temp)
             continue
 
-        while answer and answer[-1] < temp and count_remove < k:
+        while answer and answer[-1] < temp and k > 0:
             answer.pop()
-            count_remove += 1
+            k -= 1
 
-        if len(answer) < Length:
-            answer.append(temp)
-        
-    return ''.join(answer)
+        answer.append(temp)
+    
+    return ''.join(answer if k == 0 else answer[:-k])
 
 print(solution("1924", 2))              # "94"
 print(solution("1231234",3))            # "3234"
