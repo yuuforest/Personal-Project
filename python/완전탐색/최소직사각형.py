@@ -3,14 +3,14 @@
 
 def solution(sizes):
     
-    maxList = []
-    minList = []
+    maxAnswer = 0
+    minAnswer = 0
     
     for size in sizes:
-        maxList.append(max(size))
-        minList.append(min(size))
+        maxAnswer = max(maxAnswer, max(size))
+        minAnswer = max(minAnswer, min(size))
     
-    return max(maxList) * max(minList)
+    return maxAnswer * minAnswer
 
 print(solution([[60, 50], [30, 70], [60, 30], [80, 40]]))
 print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
