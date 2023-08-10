@@ -3,6 +3,25 @@
 
 def solution(priorities, location):
     answer = 0
+
+    P = []
+
+    for idx, pr in enumerate(priorities):
+        P.append((pr, idx))
+
+    while P:
+        
+        temp = P.pop(0)
+
+        if temp[0] < max(P)[0]:
+            P.append(temp)
+            continue
+
+        answer += 1
+
+        if temp[1] == location:
+            break
+
     return answer
 
 print(solution([2, 1, 3, 2], 2))            # 1
