@@ -13,7 +13,7 @@ def solution(priorities, location):
         
         temp = P.pop(0)
 
-        if temp[0] < max(P)[0]:
+        if P and temp[0] < max(P)[0]:
             P.append(temp)
             continue
 
@@ -24,5 +24,7 @@ def solution(priorities, location):
 
     return answer
 
-print(solution([2, 1, 3, 2], 2))            # 1
-print(solution([1, 1, 9, 1, 1, 1], 0))      # 5
+# print(solution([2, 1, 3, 2], 2))            # 1
+# print(solution([1, 1, 9, 1, 1, 1], 0))      # 5
+
+print(solution([1, 1, 1, 2], 2))            # 4
