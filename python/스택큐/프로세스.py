@@ -4,23 +4,25 @@
 def solution(priorities, location):
     answer = 0
 
-    P = []
+    P = [(pr, idx) for idx, pr in enumerate(priorities)]  
+    N = len(priorities) - 1  
 
-    for idx, pr in enumerate(priorities):
-        P.append((pr, idx))
-
-    while P:
+    # while len(P) > 1:
+    while answer < N:
         
         temp = P.pop(0)
 
-        if P and temp[0] < max(P)[0]:
+        if temp[0] < max(P)[0]:
             P.append(temp)
             continue
-
+        
         answer += 1
 
         if temp[1] == location:
             break
+    
+    else:
+        answer += 1
 
     return answer
 
