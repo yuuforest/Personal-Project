@@ -8,4 +8,4 @@
 
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
-| 01 | 프로세스 | Level 2 | 💭 [진행 중](https://github.com/yuuforest/Programmers/tree/main/python/%EC%8A%A4%ED%83%9D%ED%81%90)|
+| 01 | 프로세스 | Level 2 | ✔️ [완료](https://github.com/yuuforest/Programmers/tree/main/python/%EC%8A%A4%ED%83%9D%ED%81%90)|
