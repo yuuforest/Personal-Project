@@ -1,18 +1,16 @@
 
 """ Level 3. 베스트앨범 """
 
+from collections import defaultdict
+
 def solution(genres, plays):
 
     answer = []
 
-    Music = {}
+    Music = defaultdict(lambda: [0])
 
-    for idx in range(len(genres)):
+    for idx, (genre, play) in enumerate(zip(genres, plays)):
 
-        genre = genres[idx]
-        play = plays[idx]
-
-        Music.setdefault(genre, [0])
         Music[genre][0] += play
         Music[genre].append((play, idx))
 
