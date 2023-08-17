@@ -5,13 +5,13 @@ def solution(arr):
     answer = []
 
     answer.append(arr[0])
-    previous = arr[0]
 
     for num in arr[1:]:
 
-        if previous != num:
-            answer.append(num)
-            previous = num
+        if answer[-1] == num:
+            continue
+
+        answer.append(num)
         
     return answer
 
