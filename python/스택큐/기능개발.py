@@ -1,28 +1,22 @@
 
 """ Level 2. 기능개발 """
 
+import math
+
 def solution(progresses, speeds):
+
+    P = [math.ceil((100 - p) / s) for p, s in zip(progresses, speeds)]
+
     answer = []
+    standard = 0
 
-    P = []
-    for idx in range(len(progresses)):
-        n, r = divmod(100 - progresses[idx], speeds[idx])
-        P.append(n+1 if r else n)
+    for next in range(len(P)):
 
-    temp = P[0]
-    count = 1
+        if P[standard] < P[next]:
+            answer.append(next - standard)
+            standard = next
 
-    for p in P[1:]:
-
-        if p <= temp:
-            count += 1
-        else:
-            answer.append(count)
-            temp = p
-            count = 1
-
-    if count:
-        answer.append(count)
+    answer.append(next - standard + 1)
 
     return answer
 
