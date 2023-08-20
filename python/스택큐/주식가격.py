@@ -1,19 +1,23 @@
 
 """ Level 2. 주식가격 """
 
+from collections import deque
+
 def solution(prices):
 
-    length = len(prices)
-    answer = [0 for _ in range(length)]
+    answer = []
+    queue = deque(prices)
 
-    for idx, price in enumerate(prices[:length-1]):
-        
-        i = idx+1
+    while queue:
 
-        while i < (length - 1) and price <= prices[i]:
-            i += 1
+        price = queue.popleft()
 
-        answer[idx] = i - idx
+        sum = 0
+        for p in queue:
+            sum += 1
+            if p < price:break
+
+        answer.append(sum)
 
     return answer
 
