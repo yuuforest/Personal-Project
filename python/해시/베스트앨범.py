@@ -7,16 +7,22 @@ def solution(genres, plays):
 
     answer = []
 
-    count_genre = defaultdict(list)
-    count_play = defaultdict(int)
+    Music = defaultdict(lambda: [0])
 
     for idx, (genre, play) in enumerate(zip(genres, plays)):
-        count_play[genre] += play
-        count_genre[genre].append((idx, play))
 
-    for (g, _) in sorted(count_play.items(), key=lambda x:-x[1]):
-        for (p, _) in sorted(count_genre[g], key=lambda x:(-x[1], x[0])) [:2]:
-            answer.append(p)
+        Music[genre][0] += play
+        Music[genre].append((play, idx))
+
+    Music = sorted(Music.items(), key=lambda x: x[1][0], reverse=True)
+
+    for music in Music:
+        
+        temp = sorted(music[1][1:], key=lambda x:(-x[0], x[1]))
+
+        answer.append(temp[0][1])
+        if len(temp) > 1: 
+            answer.append(temp[1][1])
 
     return answer
 
