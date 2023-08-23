@@ -12,7 +12,7 @@ def solution(priorities, location):
         
         temp = P.pop(0)
 
-        if temp[0] < max(P)[0]:
+        if any(temp[0] < p[0] for p in P):
             P.append(temp)
             continue
         
