@@ -1,9 +1,23 @@
 
 """ 레벨 2. 타겟 넘버 """
 
+count = 0
+
 def solution(numbers, target):
-    answer = 0
-    return answer
+    dfs(numbers, target, 0, 0)
+    return count
+
+
+def dfs(numbers, target, idx, sum):
+
+    global count
+    if idx == len(numbers):
+        if sum == target:
+            count += 1
+        return
+    
+    dfs(numbers, target, idx+1, sum-numbers[idx])
+    dfs(numbers, target, idx+1, sum+numbers[idx])
 
 
 ### 실행
