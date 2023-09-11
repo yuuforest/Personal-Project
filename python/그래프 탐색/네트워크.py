@@ -1,6 +1,8 @@
 
 """ 레벨 3. 네트워크 """
 
+from collections import deque
+
 def solution(n, computers):
     answer = 0
     visited = [False] * n
@@ -8,18 +10,28 @@ def solution(n, computers):
     for idx in range(n):
         if not visited[idx]:
             answer += 1
-            dfs(n, computers, idx, visited)
+            visited = bfs(n, computers, idx, visited)
 
     return answer
 
 
-def dfs(n, computers, node, visited):
+def bfs(n, computers, node, visited):
 
+    queue = deque()
+    
+    queue.append(node)
     visited[node] = True
 
-    for com in range(n):
-        if not visited[com] and computers[node][com]:
-            dfs(n, computers, com, visited)
+    while queue:
+
+        now = queue.popleft()
+
+        for idx in range(n):
+            if not visited[idx] and computers[now][idx]:
+                queue.append(idx)
+                visited[idx] = True
+
+    return visited
 
 
 print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))       # 2
