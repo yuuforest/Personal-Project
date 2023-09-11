@@ -10,3 +10,4 @@
 |:--------:|:--------|:----------:|:-----------:|
 | 01 | 타겟 넘버 | Level 2 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/%ED%83%80%EA%B2%9F%20%EB%84%98%EB%B2%84.py) |
 | 02 | 게임 맵 최단거리 | Level 2 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/%EA%B2%8C%EC%9E%84%20%EB%A7%B5%20%EC%B5%9C%EB%8B%A8%EA%B1%B0%EB%A6%AC.py) |
+| 03 | 네트워크 | Level 3 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.py) |
