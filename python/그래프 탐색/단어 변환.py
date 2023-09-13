@@ -35,5 +35,5 @@ def check(word1, word2):
     return True if count == 1 else False
 
 
-print(solution("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))      # 4
+print(solution("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))       # 4
 print(solution("hit", "cog", ["hot", "dot", "dog", "lot", "log"]))              # 0
