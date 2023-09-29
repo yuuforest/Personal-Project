@@ -2,21 +2,26 @@
 """ [PCCP 모의고사 #1] 외톨이 알파벳 """
 
 def solution(input_string):
-    answer = ''
-
-    for i, s in enumerate(input_string):
-
-        if s in answer:
-            continue
-
-        if s in input_string[i+2:] and input_string[i+1] != s:
-            answer += s
-
-    if not answer:
-        return "N"
     
-    answer = "".join(sorted(answer))
-    return answer
+    idx = 0
+    count = {}
+    
+    length = len(input_string)
+
+    while idx < length:
+        
+        now = input_string[idx]
+        count[now] = count.setdefault(now, 0) + 1
+
+        while idx < length and input_string[idx] == now:
+            idx += 1
+
+    answer = ''
+    for c in count:
+        if count.get(c) > 1:
+            answer += c
+
+    return "".join(sorted(answer)) if answer else "N"
 
 
 print(solution("edeaaabbccd"))      # "de"
