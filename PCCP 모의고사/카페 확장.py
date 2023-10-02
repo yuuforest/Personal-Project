@@ -1,24 +1,28 @@
 
 """ [PCCP 모의고사 #2] 카페 확장 """
 
-def solution(menu, order, k):
-    answer = 0
+import heapq
 
-    client = []
+def solution(menu, order, k):
+    
+    answer = 1
     start, end = -k, 0
+
+    queue = []
 
     for idx in range(len(order)):
 
-        start += k
+        start += k 
         end = (start if end < start else end) + menu[order[idx]]
-        client.append((start, end))
+        heapq.heappush(queue, end)
 
-        count = 1
-        for jdx in range(idx):
-            if start < client[jdx][1]:
-                count += 1
+        while queue:
+            now = heapq.heappop(queue)
+            if start < now:
+                heapq.heappush(queue, now)
+                break
         
-        answer = max(answer, count)
+        answer = max(answer, len(queue))
 
     return answer
 
