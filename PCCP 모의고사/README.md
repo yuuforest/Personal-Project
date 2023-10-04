@@ -15,8 +15,8 @@
 **📘 PCCP 모의고사 2회**
 | **번호** | **문제** | **풀이 여부** |
 |:--------:|:--------|:-----------:|
-| 01 | 1번. 실습용 로봇 | 💭 [진행 중]() |
-| 02 | 2번. 신입사원 교육 | 💭 [진행 중]() |
+| 01 | 1번. 실습용 로봇 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EC%8B%A4%EC%8A%B5%EC%9A%A9%20%EB%A1%9C%EB%B4%87.py) |
+| 02 | 2번. 신입사원 교육 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EC%8B%A0%EC%9E%85%EC%82%AC%EC%9B%90%20%EA%B5%90%EC%9C%A1.py) |
 | 03 | 3번. 카페 확장 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EC%B9%B4%ED%8E%98%20%ED%99%95%EC%9E%A5.py) |
-| 04 | 4번. 보물 지도 | 💭 [진행 중]() |
+| 04 | 4번. 보물 지도 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EB%B3%B4%EB%AC%BC%20%EC%A7%80%EB%8F%84.py) |
 
