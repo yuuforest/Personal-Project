@@ -1,22 +1,22 @@
 
 """ [PCCP 모의고사 #2] 신입사원 교육 """
 
-import heapq
+from heapq import heappush, heappop
 
 def solution(ability, number):
 
     q = []
     for a in ability:
-        heapq.heappush(q, a)
+        heappush(q, a)
 
     for _ in range(number):
 
         total = 0
         for _ in range(2):
-            total += heapq.heappop(q)
+            total += heappop(q)
         
-        heapq.heappush(q, total)
-        heapq.heappush(q, total)
+        heappush(q, total)
+        heappush(q, total)
 
     return sum(q)
 
