@@ -13,11 +13,11 @@ def solution(command):
         elif c == 'L':
             dir = moveL(dir)
         elif c == 'G':
-            answer[0], answer[1] = moveG(answer[0], answer[1], dir)
+            answer = moveG(answer[0], answer[1], dir)
         else:
-            answer[0], answer[1] = moveB(answer[0], answer[1], dir)
+            answer = moveB(answer[0], answer[1], dir)
     
-    return answer
+    return list(answer)
 
 def moveR(dir):
     return (dir + 1) % 4
@@ -26,25 +26,14 @@ def moveL(dir):
     return 3 if dir-1 < 0 else dir-1
 
 def moveG(x, y, dir):
-    if dir == 0:
-        return x, y+1
-    elif dir == 1:
-        return x+1, y
-    elif dir == 2:
-        return x, y-1
-    else:
-        return x-1, y
+    dx = [0, 1, 0, -1]
+    dy = [1, 0, -1, 0]
+    return x + dx[dir], y + dy[dir]
 
 def moveB(x, y, dir):
-    if dir == 0:
-        return x, y-1
-    elif dir == 1:
-        return x-1, y
-    elif dir == 2:
-        return x, y+1
-    else:
-        return x+1, y
-
+    dx = [0, -1, 0, 1]
+    dy = [-1, 0, 1, 0]
+    return x + dx[dir], y + dy[dir]
 
 print(solution("GRGLGRG"))      # [2, 2]
 print(solution("GRGRGRB"))      # [2, 0]
