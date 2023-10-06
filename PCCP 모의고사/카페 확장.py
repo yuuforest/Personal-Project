@@ -10,10 +10,10 @@ def solution(menu, order, k):
 
     queue = []
 
-    for idx in range(len(order)):
+    for o in order:
 
         start += k 
-        end = (start if end < start else end) + menu[order[idx]]
+        end = (start if end < start else end) + menu[o]
         heapq.heappush(queue, end)
 
         while queue:
