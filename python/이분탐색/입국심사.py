@@ -3,7 +3,6 @@
 
 def solution(n, times):
     answer = 0
-
     start, end = 0, 1000000000*100000
 
     while start <= end:
