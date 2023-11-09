@@ -3,17 +3,12 @@
 
 def solution(bandage, health, attacks):
 
-    # bandage : 시전 시간, 초당 회복량, 추가 회복량
-    # health : 최대 최력
-    # attacks : 몬스터의 공격 시간과 피해량
-
     previous_time = 0
     now = health
     
     for (attack_time, attack_amount) in attacks:
         
         time = attack_time - previous_time - 1
-
         now += time * bandage[1] + (time // bandage[0]) * bandage[2]
 
         if health < now:
