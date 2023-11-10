@@ -20,9 +20,8 @@
 | 03 | 3번. 카페 확장 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EC%B9%B4%ED%8E%98%20%ED%99%95%EC%9E%A5.py) |
 | 04 | 4번. 보물 지도 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EB%B3%B4%EB%AC%BC%20%EC%A7%80%EB%8F%84.py) |
 
-**📔 PCCP 기출문제**
-<br> 문제 제목이 없어서 마음대로 제목을 지어보았습니다.
+**📔 PCCP 기출문제** (문제 제목이 없어서 마음대로 제목을 지어보았습니다.)
 | **번호** | **문제** | **풀이 여부** |
 |:--------:|:--------|:-----------:|
 | 01 | 1번. 붕대 감기 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EB%B6%95%EB%8C%80%20%EA%B0%90%EA%B8%B0.py) |
-
+| 02 | 2번. 가장 많은 석유 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/PCCP%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC/%EA%B0%80%EC%9E%A5%20%EB%A7%8E%EC%9D%80%20%EC%84%9D%EC%9C%A0.py) |
