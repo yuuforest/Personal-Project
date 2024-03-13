@@ -30,4 +30,5 @@
 **📙 힙 Heap**
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
-| 01 | [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906) | Level 1 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%8D%94%20%EB%A7%B5%EA%B2%8C.py)|
+| 01 | [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906) | Level 2 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%8D%94%20%EB%A7%B5%EA%B2%8C.py)|
+| 02 | [디스크 컨트롤러](https://school.programmers.co.kr/learn/courses/30/lessons/42627) | Level 3 | ✔️ [완료](https://github.com/yuuforest/Programmers/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%94%94%EC%8A%A4%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC.py) |
