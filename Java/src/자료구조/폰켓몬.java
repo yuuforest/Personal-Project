@@ -3,7 +3,7 @@ package 자료구조;
 // import java.util.HashMap;
 import java.util.HashSet;
 
-class Solution {
+public class 폰켓몬 {
 
     public static void main(String[] args) {
 
