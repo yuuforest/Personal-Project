@@ -1,6 +1,7 @@
 package 자료구조;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class 완주하지못한선수 {
@@ -33,7 +34,9 @@ public class 완주하지못한선수 {
             map.replace(c, map.get(c) - 1);
         }
 
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+        Iterator<Map.Entry<String, Integer>> iter = map.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry<String, Integer> entry = iter.next();
             if (entry.getValue() > 0) {
                 return entry.getKey().toString();
             }
