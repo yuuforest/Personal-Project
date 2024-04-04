@@ -11,6 +11,12 @@ public class HIndex {
 
         int[] c2 = {3, 0, 6, 1, 5, 8};
         System.out.println(solution(c2));
+
+        int[] c3 = {6, 5, 5, 5, 3, 2, 1, 0};
+        System.out.println(solution(c3));
+
+        int[] c4 = {0, 0, 0, 0, 0};
+        System.out.println(solution(c4));
     }
 
     public static int solution(int[] citations) {
