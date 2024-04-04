@@ -1,6 +1,7 @@
 package 자료구조;
 
-import java.util.HashMap;
+// import java.util.HashMap;
+import java.util.HashSet;
 
 class Solution {
 
@@ -19,12 +20,12 @@ class Solution {
 
     public static int solution(int[] nums) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashSet<Integer> set = new HashSet<>();
 
         for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+            set.add(num);
         }
 
-        return Math.min(nums.length / 2, map.size());
+        return Math.min(nums.length / 2, set.size());
     }
 }
