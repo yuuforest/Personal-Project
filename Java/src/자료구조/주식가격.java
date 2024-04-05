@@ -11,7 +11,20 @@ public class 주식가격 {
     }
 
     public static int[] solution(int[] prices) {
-        int[] answer = {};
+
+        int length = prices.length;
+
+        int[] answer = new int[length];
+        for (int i = 0; i < length; i++) {
+            int stan = prices[i];
+            int count = i;
+            for (int j = i+1; j < length; j++) {
+                count += 1;
+                if (prices[j] < stan) break;
+            }
+            answer[i] = count - i;
+        }
+
         return answer;
     }
 }
