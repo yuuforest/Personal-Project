@@ -1,5 +1,7 @@
 package 그래프탐색;
 
+import java.util.*;
+
 public class 타겟넘버 {
     
     public static void main(String[] args) {
@@ -15,7 +17,28 @@ public class 타겟넘버 {
     }
 
     public static int solution(int[] numbers, int target) {
+
+        Queue<Integer> q = new LinkedList<>();
+
+        q.add(-numbers[0]);
+        q.add(numbers[0]);
+
+        for (int i = 1; i < numbers.length; i++) {
+            int len = q.size();
+            for (int j = 0; j < len; j++) {
+                int num = q.poll();
+                q.add(num - numbers[i]);
+                q.add(num + numbers[i]);
+            }
+        }
+
         int answer = 0;
+        while (!q.isEmpty()) {
+            if (target == q.poll()) {
+                answer += 1;
+            }
+        }
+        
         return answer;
     }
 }
