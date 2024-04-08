@@ -15,7 +15,15 @@ public class 최소직사각형 {
     }
 
     public static int solution(int[][] sizes) {
-        int answer = 0;
-        return answer;
+
+        int wsize = 0;
+        int hsize = 0;
+
+        for (int i = 0; i < sizes.length; i++) {
+            wsize = Math.max(wsize, Math.min(sizes[i][0], sizes[i][1]));
+            hsize = Math.max(hsize, Math.max(sizes[i][0], sizes[i][1]));
+        }
+
+        return wsize * hsize;
     }
 }
