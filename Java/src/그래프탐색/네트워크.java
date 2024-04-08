@@ -1,6 +1,10 @@
 package 그래프탐색;
 
+import java.util.*;
+
 public class 네트워크 {
+
+    static boolean[] selected;
     
     public static void main(String[] args) {
 
@@ -15,10 +19,36 @@ public class 네트워크 {
 
     public static int solution(int n, int[][] computers) {
 
+        selected = new boolean[n];
+
         int answer = 0;
-        
-        
+        for (int i = 0; i < n; i++) {
+            if (!selected[i]) {
+                answer += 1;
+                bfs(n, computers, i);
+            }
+        }
 
         return answer;
+    }
+
+    public static void bfs(int n, int[][] computers, int start) {
+
+        Queue<Integer> q = new LinkedList<>();
+
+        q.add(start);
+        selected[start] = true;
+
+        while (!q.isEmpty()) {
+
+            int now = q.poll();
+
+            for (int i = 0; i < n; i++) {
+                if (!selected[i] && computers[now][i] == 1) {
+                    q.add(i);
+                    selected[i] = true;
+                }
+            }
+        }
     }
 }
