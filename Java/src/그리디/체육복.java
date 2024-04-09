@@ -21,7 +21,43 @@ public class 체육복 {
     }
 
     public static int solution(int n, int[] lost, int[] reserve) {
+        
+        int[] student = new int[n];
+
+        for (int l : lost) {
+            student[l-1] -= 1;
+        }
+
+        for (int r : reserve) {
+            student[r-1] += 1;
+        }
+
+        int temp = 0;
+        for (int i = 0; i < n; i++) {
+            if (student[i] >= 0) continue;
+
+            temp = i-1;
+            if (0 <= temp && 0 < student[temp]) {
+                student[temp] -= 1;
+                student[i] += 1;
+                continue;
+            }
+
+            temp = i+1;
+            if (temp < n && 0 < student[temp]) {
+                student[temp] -= 1;
+                student[i] += 1;
+                continue;
+            }
+        }
+
         int answer = 0;
+        for (int i = 0; i < n; i++) {
+            if (0 <= student[i]) {
+                answer += 1;
+            }
+        }
+        
         return answer;
     }
 }
