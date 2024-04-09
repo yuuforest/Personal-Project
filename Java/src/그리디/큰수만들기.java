@@ -1,5 +1,7 @@
 package 그리디;
 
+import java.util.*;
+
 public class 큰수만들기 {
     
     public static void main(String[] args) {
@@ -18,7 +20,29 @@ public class 큰수만들기 {
     }
 
     public static String solution(String number, int k) {
+
+        Stack<Character> stack = new Stack<>();
+
+        for (char temp : number.toCharArray()) {
+
+            while (!stack.isEmpty() && stack.peek() < temp && k > 0) {
+                stack.pop();
+                k--;
+            }
+
+            stack.push(temp);
+        }
+
+        while (k > 0) {
+            stack.pop();
+            k--;
+        }
+        
         String answer = "";
+        for (int i = 0; i < stack.size(); i++) {
+            answer += stack.get(i);
+        }
+
         return answer;
     }
 }
