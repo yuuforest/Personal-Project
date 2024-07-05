@@ -1,5 +1,5 @@
 
-""" [PCCP 모의고사 1회] 3번. 유전법칙 """
+""" [PCCP 모의고사] 3번. 유전법칙 """
 
 def solution(queries):
     answer = []
