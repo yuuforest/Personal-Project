@@ -1,5 +1,5 @@
 
-""" [PCCP 모의고사 1회] 4번. 운영체제 """
+""" [PCCP 모의고사] 4번. 운영체제 """
 
 from heapq import heappush, heappop
 
