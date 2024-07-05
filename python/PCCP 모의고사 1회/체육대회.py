@@ -1,5 +1,5 @@
 
-""" [PCCP 모의고사 1회] 2번. 체육대회 """
+""" [PCCP 모의고사] 2번. 체육대회 """
 
 from itertools import permutations
 
