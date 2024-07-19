@@ -1,6 +1,8 @@
 
 """ [PCCP 기출문제] 3번. 아날로그 시계 """
 
+import decimal
+
 def solution(h1, m1, s1, h2, m2, s2):
 
     answer = 0
@@ -21,19 +23,20 @@ def solution(h1, m1, s1, h2, m2, s2):
         elif (is_hour or is_minute):
             answer += 1
 
+    if (start == 0 or start == 43200):
+        answer += 1
+
     return answer
 
 def calculate_degree(second:int):
 
-    h = second / 3600
+    h = decimal.Decimal(second) / 3600
     m = (second % 3600) / 60
     s = (second % 3600) % 60
 
     hDegree = ((h % 12) * 30) + (m * 0.5) + (s * (1/120)) 
     mDegree = (m * 6) + (s * 0.1)
     sDegree = (s * 6)
-
-    print(hDegree, mDegree, sDegree)
 
     return [hDegree, mDegree, sDegree]
 
